@@ -49,12 +49,15 @@ t2industry-parser/
 
 ### 核心依赖
 
+项目依赖已在 `requirements.txt` 文件中详细列出，主要包括：
+
 - Python 3.8+
 - NumPy
 - OpenCV
 - PyTorch
 - YOLOv8 (ultralytics)
 - Pillow
+- 其他辅助库
 
 ### 安装步骤
 
