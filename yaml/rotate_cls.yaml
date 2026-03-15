@@ -1,0 +1,14 @@
+path: ./datasets/rotate_cls
+train: images/train
+val: images/train
+
+names:
+  0: bottom
+  1: left
+  2: left_bottom
+  3: left_top
+  4: right
+  5: right_bottom
+  6: right_top
+  7: top
+  8: up

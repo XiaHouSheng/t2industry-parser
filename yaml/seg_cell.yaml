@@ -1,0 +1,6 @@
+path: ./datasets/seg_cell
+train: images/train
+val: images/train
+
+names:
+  0: cell

@@ -1,0 +1,12 @@
+path: ./datasets/machine_detect
+train: images/train
+val: images/train
+
+names:
+  0: machine
+  1: power_pole
+  2: power_station
+  3: res_in_port
+  4: res_out_port
+  5: storage_box
+

@@ -1,0 +1,4 @@
+STEP1:
+./venv/Scripts/activate.bat
+STEP2:
+python ./Filter/blueprint_cli.py --input ./test/blueprint.png
