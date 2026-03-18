@@ -19,45 +19,35 @@
 - **跨平台**：核心功能支持跨平台运行（Capture 模块仅支持 Windows）
 
 ## Pipeline
-输入蓝图图像
-      │
-      ▼
-[1] 图像预处理（OpenCV）
-      - 尺寸标准化
-      - 网格裁剪（grid 划分）
-      - 颜色空间转换（RGB → HSV）
-      │
-      ▼
-[2] 元素检测（YOLOv8）
-      - 检测机器 / 传送带 / 管道 等目标
-      - 获取 bounding box + 类别
-      │
-      ▼
-[3] 局部裁剪（Crop）
-      - 根据检测框裁剪单个元素区域
-      │
-      ▼
-[4] 精细分类（Classification + HSV）
-      - 同形状元素进一步分类（cls 模型）
-      - HSV 颜色特征辅助识别
-      │
-      ▼
-[5] 方向识别（Rotation）
-      - 基于几何特征 / 模板 / 检测结果
-      - 转换为统一方向编码
-      │
-      ▼
-[6] 结构解析（Filter Pipeline）
-      - 网格对齐（mapping 到 grid）
-      - 去噪 / 合并 / 过滤异常检测
-      │
-      ▼
-[7] 状态构建（Blueprint Build）
-      - 构建蓝图 JSON 数据结构
-      - 记录元素类型 + 坐标 + 朝向
-      │
-      ▼
-输出 blueprint.json（可导入蓝图站）
+flowchart TD
+    A[输入蓝图图像] --> B[图像预处理]
+    B --> B1[尺寸标准化]
+    B --> B2[网格裁剪]
+    B --> B3[RGB → HSV]
+
+    B --> C[YOLOv8 目标检测]
+    C --> C1[机器/传送带/管道检测]
+    C --> C2[获取 bbox + 类别]
+
+    C --> D[局部裁剪 Crop]
+
+    D --> E[精细分类]
+    E --> E1[CLS 分类模型]
+    E --> E2[HSV 辅助识别]
+
+    E --> F[方向识别]
+    F --> F1[几何特征]
+    F --> F2[方向编码转换]
+
+    F --> G[结构过滤 Filter]
+    G --> G1[Grid Mapping]
+    G --> G2[去噪 / 合并]
+
+    G --> H[蓝图构建]
+    H --> H1[生成 JSON]
+    H --> H2[记录坐标 + 朝向]
+
+    H --> I[输出 blueprint.json]
 
 ## 项目结构
 
