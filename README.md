@@ -19,6 +19,7 @@
 - **跨平台**：核心功能支持跨平台运行（Capture 模块仅支持 Windows）
 
 ## Pipeline
+```mermaid
 flowchart TD
     A[输入蓝图图像] --> B[图像预处理]
     B --> B1[尺寸标准化]
@@ -48,7 +49,7 @@ flowchart TD
     H --> H2[记录坐标 + 朝向]
 
     H --> I[输出 blueprint.json]
-
+```
 ## 项目结构
 
 ```
