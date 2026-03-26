@@ -10,6 +10,8 @@ Capture 模块是专为 Windows 用户设计的自动截图工具，主要用于
 - 鼠标自动控制（模拟用户操作）
 
 ## 依赖包
+运行环境要求：**Python 3.9+**
+
 该模块依赖以下 Python 包：
 - numpy
 - pygetwindow
@@ -18,6 +20,42 @@ Capture 模块是专为 Windows 用户设计的自动截图工具，主要用于
 - PIL (Pillow)
 - cv2 (OpenCV)
 - ctypes (Windows 系统内置)
+
+### 安装命令
+推荐先创建并使用虚拟环境（venv）：
+
+```bash
+# 进入 Capture 目录
+cd Capture
+
+# 创建虚拟环境（Python 3.9+）
+python -m venv .venv
+
+# 激活虚拟环境（Windows PowerShell）
+.\.venv\Scripts\Activate.ps1
+
+# 激活虚拟环境（Windows CMD）
+.\.venv\Scripts\activate.bat
+```
+
+激活后安装依赖：
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+或手动安装：
+
+```bash
+python -m pip install numpy pygetwindow pyautogui mss Pillow opencv-python
+```
+
+安装完成后，如需退出虚拟环境：
+
+```bash
+deactivate
+```
 
 ## 部署说明
 **重要：** 由于该模块主要用于 Windows 环境下的自动截图操作，包含依赖于 Windows 系统的功能（如 `ctypes.windll` 调用），因此在部署到其他环境或作为服务运行时，**不需要安装该模块的依赖包**。
