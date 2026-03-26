@@ -4,28 +4,33 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+import logging
+
+logging.getLogger("ultralytics").setLevel(logging.ERROR)
+logging.getLogger("torch").setLevel(logging.ERROR)
 
 BASE_DIR = Path(__file__).parent.parent
+
 #分类模型
-model = YOLO(str(BASE_DIR / "model" / "yolov8n-cls-splitter-cell.pt"))
+model = YOLO(str(BASE_DIR / "model" / "yolov8n-cls-splitter-cell.pt"),verbose=False)
 
 #多层划分模型
-model_seg = YOLO("./model/yolov8n-seg-splitter-cell.pt")
+model_seg = YOLO(str(BASE_DIR / "model" / "yolov8n-seg-splitter-cell.pt"),verbose=False)
 
 #旋转分类模型
-model_rotate = YOLO("./model/yolov8n-rotate-cls.pt")
+model_rotate = YOLO(str(BASE_DIR / "model" / "yolov8n-rotate-cls.pt"),verbose=False)
 
 #机器检测模型
-model_detect = YOLO("./model/yolov8n-machine-detect.pt")
+model_detect = YOLO(str(BASE_DIR / "model" / "yolov8n-machine-detect.pt"),verbose=False)
 
 #产物分类模型 ./model/yolov8n-product-cls.pt
-model_product = YOLO("./model/yolov8n-product-cls.pt")
+model_product = YOLO(str(BASE_DIR / "model" / "yolov8n-product-cls.pt"),verbose=False)
 
 #机器旋转分类模型  ./model/yolov8n-machine-rotate-cls.pt
-model_machie_rotate = YOLO("./model/yolov8n-machine-rotate-cls.pt")
+model_machie_rotate = YOLO(str(BASE_DIR / "model" / "yolov8n-machine-rotate-cls.pt"),verbose=False)
 
 #管道 belt 旋转分类模型 yolov8n-pipe-belt-rotate-cls.pt
-model_pipe_belt_rotate = YOLO("./model/yolov8n-pipe-belt-rotate-cls.pt")
+model_pipe_belt_rotate = YOLO(str(BASE_DIR / "model" / "yolov8n-pipe-belt-rotate-cls.pt"),verbose=False)
 
 
 def trainClassfier():
@@ -211,7 +216,7 @@ def valRotateCls(ndarrays):
             class_name = result.names[class_id]
             conf = float(top1.conf[0])
             output.append({'class_id': class_id, 'class_name': class_name, 'conf': conf})
-    print(f"[RotateCls] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
+    #print(f"[RotateCls] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
     return output
 
 def valMachineDetect(ndarrays):
@@ -224,7 +229,7 @@ def valMachineDetect(ndarrays):
             class_name = result.names[class_id]
             conf = float(top1.conf[0])
             output.append({'class_id': class_id, 'class_name': class_name, 'conf': conf, 'boxes': result.boxes})
-    print(f"[MachineDetect] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
+    #print(f"[MachineDetect] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
     return output
 
 def valSegModel(ndarrays):
@@ -250,7 +255,7 @@ def valSegModel(ndarrays):
                 segmented_images.append(cropped)
                 confs.append(float(box.conf[0]))
         all_segmented.append({"segmented_images": segmented_images, "confs": confs})
-    print(f"[SegModel] 处理 {len(ndarrays)} 个样本，分割 {sum(len(s['segmented_images']) for s in all_segmented)} 个区域")
+    #print(f"[SegModel] 处理 {len(ndarrays)} 个样本，分割 {sum(len(s['segmented_images']) for s in all_segmented)} 个区域")
     return all_segmented
 
 def valClassModel(ndarrays):
@@ -262,7 +267,7 @@ def valClassModel(ndarrays):
             class_name = result.names[class_id]
             conf = float(result.probs.top1conf)
             output.append({'class_id': class_id, 'class_name': class_name, 'conf': conf})
-    print(f"[ClassModel] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
+    #print(f"[ClassModel] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
     return output
 
 def valProductCls(ndarrays):
@@ -274,7 +279,7 @@ def valProductCls(ndarrays):
             class_name = result.names[class_id]
             conf = float(result.probs.top1conf)
             output.append({'class_id': class_id, 'class_name': class_name, 'conf': conf})
-    print(f"[ProductCls] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
+    #print(f"[ProductCls] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
     return output
 
 def valMachineRotateCls(ndarrays):
@@ -286,7 +291,7 @@ def valMachineRotateCls(ndarrays):
             class_name = result.names[class_id]
             conf = float(result.probs.top1conf) 
             output.append({'class_id': class_id, 'class_name': class_name, 'conf': conf})
-    print(f"[MachineRotateCls] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
+    #print(f"[MachineRotateCls] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
     return output
 
 def valPipeBeltRotateCls(ndarrays):
@@ -298,7 +303,7 @@ def valPipeBeltRotateCls(ndarrays):
             class_name = result.names[class_id]
             conf = float(result.probs.top1conf)
             output.append({'class_id': class_id, 'class_name': class_name, 'conf': conf})
-    print(f"[PipeBeltRotateCls] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
+    #print(f"[PipeBeltRotateCls] 处理 {len(ndarrays)} 个样本，top1: {output[0]['class_name'] if output else 'None'} {output[0]['conf'] if output else 0:.2f}")
     return output
 
 if __name__ == "__main__":

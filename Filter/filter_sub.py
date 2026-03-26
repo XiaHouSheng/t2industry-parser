@@ -2,8 +2,11 @@ import cv2
 from PIL import Image
 import numpy as np
 import os
+import pathlib
 
-target_path = "./config/standard_images/"
+BASE_DIR = pathlib.Path(__file__).parent.parent
+
+target_path = BASE_DIR / "config" / "standard_images"
 classes = os.listdir(target_path)
 
 standard = {}
@@ -94,11 +97,7 @@ def find_rotate_match(img: np.ndarray, range_out=5, band=3):
 
 
 if __name__ == "__main__":
-    target_path = "./ScreenShots/target_test_single.png"
-    image = Image.open(target_path).convert("RGB")
-    ndarray = np.array(image)
-    output = find_rotate_match(ndarray)
-    print(output)
+    pass
 
 
 

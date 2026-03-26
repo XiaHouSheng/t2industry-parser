@@ -2,14 +2,14 @@ import argparse
 import json
 import numpy as np
 import cv2
-
 from PIL import Image
-
 from filter import *
 from filter_sub import *
 from filter_rotate_converter import *
 from filter_process import convert_blueprint
+import pathlib
 
+BASE_DIR = pathlib.Path(__file__).parent.parent
 
 machine_detect_classes = [
     "machine",
@@ -36,7 +36,7 @@ def parse_args():
     parser.add_argument(
         "-c",
         "--config",
-        default="./config/machine_config/product_to_factory.json",
+        default=str(BASE_DIR / "config" / "machine_config" / "product_to_factory.json"),
         help="Product to factory config json"
     )
 
@@ -50,6 +50,12 @@ def parse_args():
         "--grid-y",
         type=int,
         default=17
+    )
+
+    parser.add_argument(
+        "--save",
+        action="store_true",
+        default=True
     )
 
     return parser.parse_args()
@@ -351,15 +357,24 @@ def main():
     # -----------------------------
     # 输出蓝图
     # -----------------------------
-    convert_blueprint(data, data_belts)
+    blueprint = convert_blueprint(data, data_belts, save = args.save)
+    return blueprint
 
 def run():
     try:
-        main()
-        print("FINISH")
+        blueprint = main()
+        print(json.dumps({
+            "status": "success",
+            "blueprint": blueprint,
+            "error": ""
+        }, indent=2), flush=True)
         exit(0)
     except Exception as e:
-        print("ERROR",e)
+        print(json.dumps({
+            "status": "error",
+            "blueprint": "",
+            "error": str(e)
+        }, indent=2), flush=True)
         exit(1)
 
 if __name__ == "__main__":

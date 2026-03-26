@@ -9,6 +9,9 @@ from mss import mss
 from PIL import Image
 from pathlib import Path
 from Capture.utils import *
+import pathlib
+
+BASE_DIR = pathlib.Path(__file__).parent.parent
 
 class Capture:
     def __init__(self, title="Endfield", step=100):
@@ -147,7 +150,7 @@ class Capture:
 
 if __name__ == "__main__":
     capture = Capture()
-    output_dir = Path("./screen_shots/blueprints")
+    output_dir = BASE_DIR / "screen_shots" / "blueprints"
     output_dir.mkdir(parents=True, exist_ok=True)
     
     existing_files = list(output_dir.glob("blueprint_*.png"))

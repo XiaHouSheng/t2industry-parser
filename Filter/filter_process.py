@@ -1,6 +1,9 @@
+import pathlib
 import json
 import time
 import random
+
+BASE_DIR = pathlib.Path(__file__).parent.parent
 
 machine_class_config = {
   # 这部分是改了ID的
@@ -132,7 +135,7 @@ def convert_transport(data_belt):
 
     return belts, pipes, belt_keys, pipe_keys
 
-def convert_blueprint(data, data_belt):
+def convert_blueprint(data, data_belt, save = False):
 
     machines, widget_ids = convert_machines(data, machine_class_config)
 
@@ -150,9 +153,14 @@ def convert_blueprint(data, data_belt):
             "editPartChoose":"part0"
         }
     }
-
-    with open("./output/blueprint.json", "w") as f:
-        json.dump(blueprint, f, indent=4)
+    
+    if save:
+        with open(str(BASE_DIR / "output" / "blueprint.json"),  "w") as f:
+            json.dump(blueprint, f, indent=4)
+    
+    return blueprint
+    
+    
 
 
     

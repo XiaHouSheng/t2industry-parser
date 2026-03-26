@@ -1,7 +1,7 @@
 {
     "machine": [
         {
-            "id": "planter_1773555770521_75",
+            "id": "planter_1774178990219_664",
             "machine_id": "planter",
             "recipe": "plant_moss_3",
             "rotate": 0,
@@ -12,7 +12,7 @@
             "part": "part0"
         },
         {
-            "id": "seedHarvester_1773555770521_493",
+            "id": "seedHarvester_1774178990219_886",
             "machine_id": "seedHarvester",
             "recipe": "plant_moss_seed_3",
             "rotate": 2,
@@ -23,7 +23,7 @@
             "part": "part0"
         },
         {
-            "id": "planter_1773555770521_151",
+            "id": "planter_1774178990219_969",
             "machine_id": "planter",
             "recipe": "plant_moss_3",
             "rotate": 2,
@@ -34,7 +34,7 @@
             "part": "part0"
         },
         {
-            "id": "protocolStorageBox_1773555770521_803",
+            "id": "protocolStorageBox_1774178990219_49",
             "machine_id": "protocolStorageBox",
             "recipe": "carbon_enr",
             "rotate": 1,
@@ -45,7 +45,7 @@
             "part": "part0"
         },
         {
-            "id": "protocolStorageBox_1773555770521_634",
+            "id": "protocolStorageBox_1774178990219_234",
             "machine_id": "protocolStorageBox",
             "recipe": "carbon_enr",
             "rotate": 3,
@@ -56,7 +56,7 @@
             "part": "part0"
         },
         {
-            "id": "planter_1773555770521_130",
+            "id": "planter_1774178990219_822",
             "machine_id": "planter",
             "recipe": "plant_moss_3",
             "rotate": 0,
@@ -67,7 +67,7 @@
             "part": "part0"
         },
         {
-            "id": "seedHarvester_1773555770521_523",
+            "id": "seedHarvester_1774178990219_329",
             "machine_id": "seedHarvester",
             "recipe": "plant_moss_seed_3",
             "rotate": 0,
@@ -78,7 +78,7 @@
             "part": "part0"
         },
         {
-            "id": "crusher_1773555770521_180",
+            "id": "crusher_1774178990219_732",
             "machine_id": "crusher",
             "recipe": "plant_moss_powder_3",
             "rotate": 0,
@@ -89,7 +89,7 @@
             "part": "part0"
         },
         {
-            "id": "planter_1773555770521_741",
+            "id": "planter_1774178990219_541",
             "machine_id": "planter",
             "recipe": "plant_moss_3",
             "rotate": 2,
@@ -100,7 +100,7 @@
             "part": "part0"
         },
         {
-            "id": "crusher_1773555770521_39",
+            "id": "crusher_1774178990219_439",
             "machine_id": "crusher",
             "recipe": "plant_moss_powder_3",
             "rotate": 1,
@@ -111,7 +111,7 @@
             "part": "part0"
         },
         {
-            "id": "powerSupplier_1773555770521_516",
+            "id": "powerSupplier_1774178990219_205",
             "machine_id": "powerSupplier",
             "recipe": "",
             "rotate": 0,
@@ -122,7 +122,7 @@
             "part": "part0"
         },
         {
-            "id": "powerSupplier_1773555770521_722",
+            "id": "powerSupplier_1774178990219_776",
             "machine_id": "powerSupplier",
             "recipe": "",
             "rotate": 0,
@@ -362,18 +362,18 @@
         ],
         "partsWidgetId": {
             "part0": [
-                "planter_1773555770521_75",
-                "seedHarvester_1773555770521_493",
-                "planter_1773555770521_151",
-                "protocolStorageBox_1773555770521_803",
-                "protocolStorageBox_1773555770521_634",
-                "planter_1773555770521_130",
-                "seedHarvester_1773555770521_523",
-                "crusher_1773555770521_180",
-                "planter_1773555770521_741",
-                "crusher_1773555770521_39",
-                "powerSupplier_1773555770521_516",
-                "powerSupplier_1773555770521_722"
+                "planter_1774178990219_664",
+                "seedHarvester_1774178990219_886",
+                "planter_1774178990219_969",
+                "protocolStorageBox_1774178990219_49",
+                "protocolStorageBox_1774178990219_234",
+                "planter_1774178990219_822",
+                "seedHarvester_1774178990219_329",
+                "crusher_1774178990219_732",
+                "planter_1774178990219_541",
+                "crusher_1774178990219_439",
+                "powerSupplier_1774178990219_205",
+                "powerSupplier_1774178990219_776"
             ]
         },
         "partsBelts": {
