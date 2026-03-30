@@ -90,7 +90,8 @@ def main():
     machine_detect_boxes = result_machine_detect[0]['boxes']
     machine_detect_boxes = [
         box for box in machine_detect_boxes
-        if box.conf[0] >= 0.7
+        #这里的rate需要按实际更改|预计下次训练的时候再调整
+        if box.conf[0] >= 0.6
     ]
 
     skip_range = []

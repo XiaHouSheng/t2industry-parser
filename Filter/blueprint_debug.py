@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 #蓝图文件
 #target_path = "./ScreenShots/target_test_bp.png"
-target_path = "./ScreenShots/target_test_bp_2.png"
+target_path = "./test/blueprint_test.png"
 target_img = Image.open(target_path).convert("RGB")
 
 #配置文件
@@ -19,7 +19,7 @@ machine_detect_classes = ["machine", "power_pole", "power_station", "res_in_port
 
 #数据
 #w_index, h_index = 9, 11
-w_index, h_index = 16, 17
+w_index, h_index = 12, 5
 width, height = target_img.size
 
 grid_width = width // w_index
@@ -32,7 +32,7 @@ target_batch = [target_ndarray]
 #检测机器
 result_machine_detect = valMachineDetect(target_batch)
 machine_detect_boxes = result_machine_detect[0]['boxes']
-machine_detect_boxes = [box for box in machine_detect_boxes if box.conf[0] >= 0.7]
+machine_detect_boxes = [box for box in machine_detect_boxes if box.conf[0] >= 0.6]
 
 #可视化展示机器检测结果
 if True:
@@ -238,7 +238,7 @@ if False:
     plt.show()
 
 #这里进行区域分割
-SHOW_VISUALIZATION = False
+SHOW_VISUALIZATION = True
 visualization_data = []
 data_belts = []
 #遍历区域解析beltApipe
@@ -347,7 +347,7 @@ print(data)
 print("传送带/管道/物流模块 识别结果\n")
 print(data_belts)
 
-convert_blueprint(data, data_belts)
+convert_blueprint(data, data_belts, save = True)
 
 #遍历完毕后统一展示可视化
 if SHOW_VISUALIZATION and len(visualization_data) > 0:

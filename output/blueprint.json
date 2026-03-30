@@ -1,412 +1,188 @@
 {
-    "machine": [
-        {
-            "id": "planter_1774178990219_664",
-            "machine_id": "planter",
-            "recipe": "plant_moss_3",
-            "rotate": 0,
-            "x": 1,
-            "y": 1,
-            "w": 5,
-            "h": 5,
-            "part": "part0"
-        },
-        {
-            "id": "seedHarvester_1774178990219_886",
-            "machine_id": "seedHarvester",
-            "recipe": "plant_moss_seed_3",
-            "rotate": 2,
-            "x": 6,
-            "y": 1,
-            "w": 5,
-            "h": 5,
-            "part": "part0"
-        },
-        {
-            "id": "planter_1774178990219_969",
-            "machine_id": "planter",
-            "recipe": "plant_moss_3",
-            "rotate": 2,
-            "x": 10,
-            "y": 11,
-            "w": 5,
-            "h": 5,
-            "part": "part0"
-        },
-        {
-            "id": "protocolStorageBox_1774178990219_49",
-            "machine_id": "protocolStorageBox",
-            "recipe": "carbon_enr",
-            "rotate": 1,
-            "x": 8,
-            "y": 6,
-            "w": 3,
-            "h": 3,
-            "part": "part0"
-        },
-        {
-            "id": "protocolStorageBox_1774178990219_234",
-            "machine_id": "protocolStorageBox",
-            "recipe": "carbon_enr",
-            "rotate": 3,
-            "x": 5,
-            "y": 8,
-            "w": 3,
-            "h": 3,
-            "part": "part0"
-        },
-        {
-            "id": "planter_1774178990219_822",
-            "machine_id": "planter",
-            "recipe": "plant_moss_3",
-            "rotate": 0,
-            "x": 11,
-            "y": 1,
-            "w": 5,
-            "h": 5,
-            "part": "part0"
-        },
-        {
-            "id": "seedHarvester_1774178990219_329",
-            "machine_id": "seedHarvester",
-            "recipe": "plant_moss_seed_3",
-            "rotate": 0,
-            "x": 5,
-            "y": 11,
-            "w": 5,
-            "h": 5,
-            "part": "part0"
-        },
-        {
-            "id": "crusher_1774178990219_732",
-            "machine_id": "crusher",
-            "recipe": "plant_moss_powder_3",
-            "rotate": 0,
-            "x": 1,
-            "y": 8,
-            "w": 3,
-            "h": 3,
-            "part": "part0"
-        },
-        {
-            "id": "planter_1774178990219_541",
-            "machine_id": "planter",
-            "recipe": "plant_moss_3",
-            "rotate": 2,
-            "x": 0,
-            "y": 11,
-            "w": 5,
-            "h": 5,
-            "part": "part0"
-        },
-        {
-            "id": "crusher_1774178990219_439",
-            "machine_id": "crusher",
-            "recipe": "plant_moss_powder_3",
-            "rotate": 1,
-            "x": 12,
-            "y": 6,
-            "w": 3,
-            "h": 3,
-            "part": "part0"
-        },
-        {
-            "id": "powerSupplier_1774178990219_205",
-            "machine_id": "powerSupplier",
-            "recipe": "",
-            "rotate": 0,
-            "x": 3,
-            "y": 6,
-            "w": 2,
-            "h": 2,
-            "part": "part0"
-        },
-        {
-            "id": "powerSupplier_1774178990219_776",
-            "machine_id": "powerSupplier",
-            "recipe": "",
-            "rotate": 0,
-            "x": 11,
-            "y": 9,
-            "w": 2,
-            "h": 2,
-            "part": "part0"
-        }
-    ],
-    "belt": [
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 2,
-            "position": {
-                "x": 0,
-                "y": 8
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 3,
-            "position": {
-                "x": 0,
-                "y": 9
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 3,
-            "position": {
-                "x": 0,
-                "y": 10
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 0,
-            "position": {
-                "x": 4,
-                "y": 8
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 0,
-            "position": {
-                "x": 4,
-                "y": 9
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 0,
-            "position": {
-                "x": 4,
-                "y": 10
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 1,
-            "position": {
-                "x": 4,
-                "y": 16
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 2,
-            "position": {
-                "x": 5,
-                "y": 0
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 1,
-            "position": {
-                "x": 5,
-                "y": 6
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 0,
-            "position": {
-                "x": 5,
-                "y": 16
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 3,
-            "position": {
-                "x": 6,
-                "y": 0
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 0,
-            "position": {
-                "x": 6,
-                "y": 6
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 2,
-            "position": {
-                "x": 9,
-                "y": 10
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 1,
-            "position": {
-                "x": 9,
-                "y": 16
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 2,
-            "position": {
-                "x": 10,
-                "y": 0
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 3,
-            "position": {
-                "x": 10,
-                "y": 10
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 0,
-            "position": {
-                "x": 10,
-                "y": 16
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 3,
-            "position": {
-                "x": 11,
-                "y": 0
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 2,
-            "position": {
-                "x": 11,
-                "y": 6
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 2,
-            "position": {
-                "x": 11,
-                "y": 7
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 2,
-            "position": {
-                "x": 11,
-                "y": 8
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 1,
-            "position": {
-                "x": 15,
-                "y": 6
-            }
-        },
-        {
-            "id": "belt",
-            "type": "belt-img",
-            "rotate": 1,
-            "position": {
-                "x": 15,
-                "y": 7
-            }
-        },
-        {
-            "id": "belt_corner1",
-            "type": "turn-img",
-            "rotate": 0,
-            "position": {
-                "x": 15,
-                "y": 8
-            }
-        }
-    ],
-    "pipe": [],
-    "part": {
-        "parts": [
-            {
-                "name": "part0",
-                "code": "",
-                "show": true
-            }
-        ],
-        "partsWidgetId": {
-            "part0": [
-                "planter_1774178990219_664",
-                "seedHarvester_1774178990219_886",
-                "planter_1774178990219_969",
-                "protocolStorageBox_1774178990219_49",
-                "protocolStorageBox_1774178990219_234",
-                "planter_1774178990219_822",
-                "seedHarvester_1774178990219_329",
-                "crusher_1774178990219_732",
-                "planter_1774178990219_541",
-                "crusher_1774178990219_439",
-                "powerSupplier_1774178990219_205",
-                "powerSupplier_1774178990219_776"
-            ]
-        },
-        "partsBelts": {
-            "part0": [
-                "0-8",
-                "0-9",
-                "0-10",
-                "4-8",
-                "4-9",
-                "4-10",
-                "4-16",
-                "5-0",
-                "5-6",
-                "5-16",
-                "6-0",
-                "6-6",
-                "9-10",
-                "9-16",
-                "10-0",
-                "10-10",
-                "10-16",
-                "11-0",
-                "11-6",
-                "11-7",
-                "11-8",
-                "15-6",
-                "15-7",
-                "15-8"
-            ]
-        },
-        "partsPipes": {
-            "part0": []
-        },
-        "editPartChoose": "part0"
+  "machine": [
+    {
+      "id": "refineryFurnace_1774873371275_904",
+      "machine_id": "refineryFurnace",
+      "recipe": "iron_nugget",
+      "rotate": 2,
+      "x": 9,
+      "y": 2,
+      "w": 3,
+      "h": 3,
+      "part": "part0"
+    },
+    {
+      "id": "refineryFurnace_1774873371275_874",
+      "machine_id": "refineryFurnace",
+      "recipe": "iron_nugget",
+      "rotate": 2,
+      "x": 6,
+      "y": 2,
+      "w": 3,
+      "h": 3,
+      "part": "part0"
+    },
+    {
+      "id": "refineryFurnace_1774873371275_728",
+      "machine_id": "refineryFurnace",
+      "recipe": "iron_nugget",
+      "rotate": 2,
+      "x": 0,
+      "y": 2,
+      "w": 3,
+      "h": 3,
+      "part": "part0"
+    },
+    {
+      "id": "refineryFurnace_1774873371275_484",
+      "machine_id": "refineryFurnace",
+      "recipe": "iron_nugget",
+      "rotate": 2,
+      "x": 3,
+      "y": 2,
+      "w": 3,
+      "h": 3,
+      "part": "part0"
+    },
+    {
+      "id": "powerSupplier_1774873371275_516",
+      "machine_id": "powerSupplier",
+      "recipe": "",
+      "rotate": 0,
+      "x": 5,
+      "y": 0,
+      "w": 2,
+      "h": 2,
+      "part": "part0"
     }
+  ],
+  "belt": [
+    {
+      "id": "belt",
+      "type": "belt-img",
+      "rotate": 3,
+      "position": {
+        "x": 1,
+        "y": 0
+      }
+    },
+    {
+      "id": "belt",
+      "type": "belt-img",
+      "rotate": 3,
+      "position": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    {
+      "id": "belt",
+      "type": "belt-img",
+      "rotate": 3,
+      "position": {
+        "x": 4,
+        "y": 0
+      }
+    },
+    {
+      "id": "belt",
+      "type": "belt-img",
+      "rotate": 3,
+      "position": {
+        "x": 4,
+        "y": 1
+      }
+    },
+    {
+      "id": "belt_corner1",
+      "type": "turn-img",
+      "rotate": 2,
+      "position": {
+        "x": 7,
+        "y": 0
+      }
+    },
+    {
+      "id": "belt",
+      "type": "belt-img",
+      "rotate": 3,
+      "position": {
+        "x": 7,
+        "y": 1
+      }
+    },
+    {
+      "id": "belt",
+      "type": "belt-img",
+      "rotate": 0,
+      "position": {
+        "x": 8,
+        "y": 0
+      }
+    },
+    {
+      "id": "belt_corner1",
+      "type": "turn-img",
+      "rotate": 0,
+      "position": {
+        "x": 9,
+        "y": 0
+      }
+    },
+    {
+      "id": "belt",
+      "type": "belt-img",
+      "rotate": 3,
+      "position": {
+        "x": 11,
+        "y": 0
+      }
+    },
+    {
+      "id": "belt",
+      "type": "belt-img",
+      "rotate": 3,
+      "position": {
+        "x": 11,
+        "y": 1
+      }
+    }
+  ],
+  "pipe": [],
+  "part": {
+    "parts": [
+      {
+        "name": "part0",
+        "code": "",
+        "show": true
+      }
+    ],
+    "partsWidgetId": {
+      "part0": [
+        "refineryFurnace_1774873371275_904",
+        "refineryFurnace_1774873371275_874",
+        "refineryFurnace_1774873371275_728",
+        "refineryFurnace_1774873371275_484",
+        "powerSupplier_1774873371275_516"
+      ]
+    },
+    "partsBelts": {
+      "part0": [
+        "1-0",
+        "1-1",
+        "4-0",
+        "4-1",
+        "7-0",
+        "7-1",
+        "8-0",
+        "9-0",
+        "11-0",
+        "11-1"
+      ]
+    },
+    "partsPipes": {
+      "part0": []
+    },
+    "editPartChoose": "part0"
+  }
 }
